@@ -42,7 +42,7 @@ func (s *server) Compute(cxt context.Context, r *pb.ChooseRequest) (*pb.ChooseRe
 	result := &pb.ChooseResponse{}
 	result.Result = choose(r.N, r.K)
 
-	logMessage := fmt.Sprintf("n: %d   k: %d     nCk: %d", r.N, r.K, result.Result)
+	logMessage := fmt.Sprintf("n: %f   k: %f     nCk: %f", r.N, r.K, result.Result)
 	log.Println(logMessage)
 
 	return result, nil
