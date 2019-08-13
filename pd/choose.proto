@@ -2,3 +2,16 @@ syntax = "proto3";
 
 package pb;
 
+message ChooseRequest {
+    double n = 1;
+    double k = 2;
+}
+
+message ChooseResponse {
+    double result = 1;
+}
+
+service ChooseService {
+    rpc Compute (ChooseRequest) returns (ChooseResponse) {
+    }
+}
