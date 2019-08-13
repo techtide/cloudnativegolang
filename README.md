@@ -1,5 +1,9 @@
 # godomicroservice
+<img src="https://api.cirrus-ci.com/github/techtide/godomicroservice.svg">
+
 Using Go, gRPC, Docker, Kubernetes, and Cirrus CI
+
+That Cirrus CI test really shouldn't be passing, as I haven't found a way for me to allow Cirrus CI to test endpoints, since the endpoints are not running on their end, and aren't running at all.
 
 API will take two numbers and do a combinatorics function, just as an example:
 
