@@ -35,7 +35,7 @@ func factorial(x float64) float64 {
 }
 
 func choose(n, k float64) float64 {
-	return (factorial(n)) / (factorial(k) * factorial(n-k)
+	return (factorial(n)) / (factorial(k) * factorial(n-k))
 }
 
 func (s *server) Compute(cxt context.Context, r *pb.ChooseRequest) (*pb.ChooseResponse, error) {
