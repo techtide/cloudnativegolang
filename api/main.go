@@ -15,7 +15,7 @@ import (
 )
 
 func main() {
-	conn, err := grpc.Dial("choose-service:3000", grpc.WithInsecure())
+	conn, err := grpc.Dial(":3001", grpc.WithInsecure())
 	if err != nil {
 		panic(err)
 	}
@@ -51,7 +51,10 @@ func main() {
 	}).Methods("GET")
 
 	fmt.Println("Application is running on : 8080 .....")
-	http.ListenAndServe(":8080", routes)
+	err = http.ListenAndServe(":8080", routes)
+	if err != nil {
+		panic(err)
+	}
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {

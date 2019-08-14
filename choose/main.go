@@ -1,3 +1,5 @@
+//go:generate protoc -I . --go_out=plugins=grpc:. choose.proto
+
 package main
 
 import (
@@ -8,14 +10,15 @@ import (
 
 	"godomicroservice/pb"
 
-	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
+
+	"google.golang.org/grpc"
 )
 
 type server struct{}
 
 func main() {
-	lis, err := net.Listen("tcp", ":3000")
+	lis, err := net.Listen("tcp", ":3001")
 	if err != nil {
 		log.Fatalf("Couldn't listen because of error %v", err)
 	}
