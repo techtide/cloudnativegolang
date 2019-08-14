@@ -15,7 +15,7 @@ import (
 )
 
 func main() {
-	conn, err := grpc.Dial(":3000", grpc.WithInsecure())
+	conn, err := grpc.Dial("add-service:3001", grpc.WithInsecure())
 	if err != nil {
 		panic(err)
 	}
@@ -50,8 +50,8 @@ func main() {
 		}
 	}).Methods("GET")
 
-	fmt.Println("Application is running on : 8080 .....")
-	err = http.ListenAndServe(":8080", routes)
+	fmt.Println("Application is running on port 8081...")
+	err = http.ListenAndServe(":8081", routes)
 	if err != nil {
 		panic(err)
 	}
