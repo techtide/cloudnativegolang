@@ -1,11 +1,8 @@
 # godomicroservice
 <img src="https://api.cirrus-ci.com/github/techtide/godomicroservice.svg">
+_That Cirrus CI test really shouldn't be passing, as I haven't found a way for me to allow Cirrus CI to test endpoints, since the endpoints are not running on their end, and aren't running at all._
 
-Using Go, gRPC, Docker, Kubernetes, and Cirrus CI
-
-That Cirrus CI test really shouldn't be passing, as I haven't found a way for me to allow Cirrus CI to test endpoints, since the endpoints are not running on their end, and aren't running at all.
-
-The Releases tab on GitHub contains a link to download the client script, which connects to the API when it is running on the local machine, as per the instructions.
+Using Go, gRPC, Docker, Mux, Kubernetes, and [kind of] Cirrus CI.
 
 API will take two numbers and do a combinatorics function, just as an example:
 
@@ -13,4 +10,19 @@ API will take two numbers and do a combinatorics function, just as an example:
 
 * ``/pick/5/3`` is 5 pick 3, the value of which is 60.
 
-The reason this was picked is because I couldn't think of anything else.
+The reason this was picked this very random service idea is because I couldn't think of anything else.
+
+### Client
+
+The Releases tab on GitHub contains a link to download the client script, which connects to the API when it is running on the local machine, as per the instructions.
+
+If you're on a system with wget, Python 3, and gunzip installed run, ``wget https://github.com/techtide/godomicroservice/files/3497746/wayra_client.zip && gunzip wayra_client.zip && python3 wayra_client.py``. 
+
+This is just a very simple CLI utility to interact with the API, which should be running on your local machine at 127.0.0.1:8081.
+
+### Justifications
+
+Justification 1: Is it cloud native?
+Yes, it is cloud native. There are example Dockerfiles and Kubernetes configs which should, probably, work. This means that the microservice is scalable since it is containarized, but I would hesistate as to why you would ever want a scalable probability calculator.
+
+Justification 2: Does it follow the 12 Factor App Impacts?
