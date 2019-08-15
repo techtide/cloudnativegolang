@@ -32,9 +32,15 @@ Justification 2: Does it follow the 12 Factor App Impacts?
 1. Codebase is clearly on Git and version control, attempts were made to use CI to communicate with the API.
 2. Dependencies are written above, ``go get.`` will traverse through all the dependencies declared in these files and install them as appropriate.
 3. Configs are in the environment.
-4. what's a backing service...
-5. forget this happened
-6. yes
+4. N/A
+5. That has also been done, in Kubernetes config you can see this.
+6. Yes.
+7. This is done.
+8. N/A
+9. It's kind of hard to not have this in something like this.
+10. There's no difference.
+11. Go logs and testing pretty much do this I think.
+12. There are no such admin or management tasks involved!
 
 *That Cirrus CI test really shouldn't be passing, as I haven't found a way for me to allow Cirrus CI to test endpoints, since the endpoints are not running on their end, and aren't running at all.*
 
