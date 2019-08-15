@@ -25,8 +25,8 @@ func main() {
 
 	routes.HandleFunc("/", indexHandler).Methods("GET")
 	routes.HandleFunc("/choose/{n}/{k}", func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Content-Type", "application/json; charset=UFT-8")
-
+		//w.Header().Set("Content-Type", "application/json; charset=UFT-8")
+		w.Header().Set("Content-Type", "application/json")
 		vars := mux.Vars(r)
 		n, err := strconv.ParseFloat(vars["n"], 64)
 		if err != nil {
