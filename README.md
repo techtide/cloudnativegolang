@@ -1,6 +1,5 @@
 # godomicroservice
 <img src="https://api.cirrus-ci.com/github/techtide/godomicroservice.svg">
-_That Cirrus CI test really shouldn't be passing, as I haven't found a way for me to allow Cirrus CI to test endpoints, since the endpoints are not running on their end, and aren't running at all._
 
 Other related projects done here:
 * [gotrymicroservice](https://github.com/techtide/gotrymicroservice)
@@ -36,3 +35,8 @@ Justification 2: Does it follow the 12 Factor App Impacts?
 4. what's a backing service...
 5. forget this happened
 6. yes
+
+*That Cirrus CI test really shouldn't be passing, as I haven't found a way for me to allow Cirrus CI to test endpoints, since the endpoints are not running on their end, and aren't running at all.*
+
+
+
