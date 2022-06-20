@@ -5,7 +5,7 @@ internship at [Ori](https://ori.co) during secondary school. These microservice
 projects merely served as a way to get up to speed in Golang, so that I could
 engage further with their codebase. The areas covered in these repos are:
 
-* gRPc
+* gRPC
 
 * Protocol Buffers
 
@@ -17,8 +17,8 @@ The contained directories are as follows:
   explains, this is the runner of a simple cloud native microservice written in
   Go, using gRPC and Protocol Buffers.
 
-* [gotrymicroservice](gotrymicroservice): Rudimentary implementation of
-  godomicroservice without using Protocol Buffers.
+* [gotrymicroservice](gotrymicroservice): Wrapper around [godomicroservice](godomicroservice)
+  to run it in a mini Kubernetes cluster (using local [Minikube](https://minikube.sigs.k8s.io/docs/)).
 
 * [godotest](godotest): Testing the above microservices using native Go tests
   and the [Cirrus](https://cirrus-ci.org/) continuous integration (CI) tool
